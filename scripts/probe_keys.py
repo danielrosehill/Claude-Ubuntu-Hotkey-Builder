@@ -28,6 +28,9 @@ from hkb_common import (xkb_keysym, classify, device_keys, emit, input_devices, 
                         keyname, load_json, now, save_json)
 
 EV_KEY, EV_MSC, MSC_SCAN = 0x01, 0x04, 0x04
+# Character keys come from the layout, are never shortcut candidates, and
+# recording them would log what the user typed: show them as "typing", never save.
+TYPING = set(range(2, 14)) | set(range(16, 28)) | set(range(30, 42)) | {43} | set(range(44, 54)) | {57}
 EVENT = struct.Struct("llHHi")  # timeval (2 longs), type, code, value
 
 
@@ -56,7 +59,7 @@ def listen(devs, seconds):
         return []
     print("Listening on %d devices for %ds. Press the keys you want to identify..." % (len(fds), seconds),
           file=sys.stderr)
-    presses, scan = [], {}
+    presses, scan, typing = [], {}, 0
     end = time.time() + seconds
     try:
         while time.time() < end:
@@ -67,6 +70,9 @@ def listen(devs, seconds):
                     _, _, typ, code, value = EVENT.unpack_from(data, i)
                     if typ == EV_MSC and code == MSC_SCAN:
                         scan[fd] = value
+                    elif typ == EV_KEY and value == 1 and code in TYPING:
+                        scan.pop(fd, None)
+                        typing += 1
                     elif typ == EV_KEY and value == 1:
                         d = fds[fd]
                         p = {"event": d["event"], "device": d.get("name"), "code": code,
@@ -83,6 +89,8 @@ def listen(devs, seconds):
     finally:
         for fd in fds:
             os.close(fd)
+    if typing:
+        print("  (%d character-key presses ignored: letters, digits, punctuation, space)" % typing, file=sys.stderr)
     return presses
 
 
