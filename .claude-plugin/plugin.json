@@ -1,0 +1,13 @@
+{
+  "name": "hotkey-builder",
+  "version": "0.1.0",
+  "description": "Find free keys and build working shortcuts, macros and text-injection hotkeys on Ubuntu: probe keyboards and USB IDs, audit every existing binding (KDE, GNOME, input-remapper, keyd, hwdb), suggest non-conflicting keys, check and install injectors (ydotool) and interceptors (input-remapper), bind by the route that works on X11 or Wayland, verify, and keep a per-machine reference.",
+  "author": {
+    "name": "Daniel Rosehill",
+    "email": "public@danielrosehill.com",
+    "url": "https://danielrosehill.com"
+  },
+  "repository": "https://github.com/danielrosehill/Claude-Ubuntu-Hotkey-Builder",
+  "license": "MIT",
+  "keywords": ["ubuntu", "linux", "keyboard", "shortcuts", "hotkeys", "macros", "text-injection", "ydotool", "input-remapper", "kde", "gnome", "wayland", "lsusb", "evdev"]
+}
