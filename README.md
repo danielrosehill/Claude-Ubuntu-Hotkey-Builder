@@ -81,9 +81,8 @@ injection. Each tool is optional; `check-environment` reports and installs.
 /plugin install hotkey-builder@danielrosehill
 ```
 
-Related: [`keyboard-scanner`](https://github.com/danielrosehill/Claude-Keyboard-Scanner)
-profiles keyboards through a questionnaire and suggests remap ideas; this plugin
-measures the machine and implements the binding.
+The commands folded in from `keyboard-scanner` (2026-11-05) profile keyboards through a
+questionnaire and suggest remap ideas; the skills measure the machine and implement the binding.
 
 ## License
 
