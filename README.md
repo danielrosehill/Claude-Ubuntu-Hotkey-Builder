@@ -88,3 +88,7 @@ measures the machine and implements the binding.
 ## License
 
 MIT
+
+## Folded in
+
+- `keyboard-scanner`, retired 2026-11-05: commands keyboard-intake (was intake), list-profiles, scan-keycodes, suggest-remaps, and the keyboard-profiler agent.

@@ -1,6 +1,6 @@
 {
   "name": "hotkey-builder",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Find free keys and build working shortcuts, macros and text-injection hotkeys on Ubuntu: probe keyboards and USB IDs, audit every existing binding (KDE, GNOME, input-remapper, keyd, hwdb), suggest non-conflicting keys, check and install injectors (ydotool) and interceptors (input-remapper), bind by the route that works on X11 or Wayland, verify, and keep a per-machine reference.",
   "author": {
     "name": "Daniel Rosehill",
