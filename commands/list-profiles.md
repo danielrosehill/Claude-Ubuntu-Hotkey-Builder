@@ -27,7 +27,7 @@ For each keyboard profile found, show:
 ```
 
 Then suggest next steps:
-- If no profiles exist: "Run `/intake` to profile your first keyboard"
+- If no profiles exist: "Run `/keyboard-intake` to profile your first keyboard"
 - If profiles exist but no scans: "Run `/scan-keycodes` to map keycodes"
 - If scans exist but no suggestions: "Run `/suggest-remaps` for remap ideas"
-- If everything is complete: "All keyboards profiled! Run `/intake` to add another, or update existing profiles."
+- If everything is complete: "All keyboards profiled! Run `/keyboard-intake` to add another, or update existing profiles."

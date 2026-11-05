@@ -71,4 +71,4 @@ Resolve the plugin's data directory as `$CLAUDE_USER_DATA/keyboard-scanner/` if 
 
 2. Also save a formatted profile report to `$DATA/profiles/{name-slug}-profile.md`
 
-3. Let the user know they can now run `/scan-keycodes` to map all available keycodes, or `/intake` again to profile another keyboard.
+3. Let the user know they can now run `/scan-keycodes` to map all available keycodes, or `/keyboard-intake` again to profile another keyboard.

@@ -12,7 +12,7 @@ Resolve the plugin's data directory as `$CLAUDE_USER_DATA/keyboard-scanner/` if 
 
 1. Read keyboard profiles from `$DATA/keyboards/`
 2. Read keycode scans from `$DATA/keycodes/`
-3. If either is missing, tell the user to run `/intake` and/or `/scan-keycodes` first
+3. If either is missing, tell the user to run `/keyboard-intake` and/or `/scan-keycodes` first
 
 ## Step 2: Identify Underused Keys
 

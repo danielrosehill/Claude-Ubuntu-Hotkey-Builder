@@ -30,7 +30,7 @@ Run: `echo $XDG_SESSION_TYPE` or check if Wayland or X11 is in use.
 
 Resolve the plugin's data directory as `$CLAUDE_USER_DATA/keyboard-scanner/` if `CLAUDE_USER_DATA` is set; otherwise `$XDG_DATA_HOME/claude-plugins/keyboard-scanner/` if `XDG_DATA_HOME` is set; otherwise `~/.local/share/claude-plugins/keyboard-scanner/`. Referred to below as `$DATA`.
 
-Check `$DATA/keyboards/` for existing profiles. If a profile exists, associate this scan with it. If not, suggest the user runs `/intake` first.
+Check `$DATA/keyboards/` for existing profiles. If a profile exists, associate this scan with it. If not, suggest the user runs `/keyboard-intake` first.
 
 ## Step 4: Organize and Save
 
